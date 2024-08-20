@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+* {
+  font-family: "Playfair Display", serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: white;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #081b29;
+}
+label {
+  transition: 0.5s;
+  position: relative;
+  bottom: -10px;
+  font-size: 18px;
+  font-weight: lighter;
+}
+input {
+  transition: 0.5s;
+  color: black;
+}
+.sub-btn {
+  transition: 0.5s;
+  cursor: pointer;
+  position: relative;
+  background: transparent;
+  border: 2px solid #0ef;
+  outline: none;
+}
+.new-btn {
+  border: transparent;
+  background-color: #0ef;
+  color: #081b29;
+  border-radius: 10px;
+  padding: 5px 25px;
+  margin: 5px;
+}
+.new-btn:hover {
+  background-color: #fff;
+  transition: 0.5s;
+}
+/*In edit student detail we will make this hidden class in a div*/
+.hidden {
+  display: none;
+}
+table,
+th,
+td {
+  text-align: center;
+  border: 3px solid rgb(17, 190, 196);
+}
+.box {
+  box-shadow: rgba(126, 203, 236, 0.12) 0px 15px 15px 0px,
+    rgba(131, 209, 243, 0.32) 0px 0px 8px 8px;
+  position: relative;
+  width: 700px;
+  height: 400px;
+  background: transparent;
+  border: 3px solid rgb(17, 190, 196);
+}
+/* button animation */
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  transition: all 0.2s;
+  position: absolute;
+}
+
+.btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  background-color: white;
+  color: #081b29;
+}
+
+.btn:active {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.331);
+}
+
+.btn-white {
+  background-color: #0ef;
+  color: #081b29;
+  font-size: 17px;
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.5s;
+}
+
+.btn-white::after {
+  background-color: #fff;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.6) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn-animated {
+  animation: moveInBottom 5s ease-out;
+  animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
