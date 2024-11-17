@@ -1,11 +1,19 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --main-color: #0ef;
+  --light-color: #fff;
+  --dark-color: black;
+}
+
 * {
-  font-family: "Playfair Display", serif;
+  font-family: "Work Sans", sans-serif;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  color: white;
+  color: var(--light-color);
 }
+
 body {
   min-height: 100vh;
   display: flex;
@@ -13,56 +21,78 @@ body {
   align-items: center;
   background-color: #081b29;
 }
+
+
+.form-wrapper {
+  border-radius: 10px;
+}
+
 label {
-  transition: 0.5s;
-  position: relative;
-  bottom: -10px;
   font-size: 18px;
   font-weight: lighter;
+  transition: 0.5s;
+  font-weight: bold;
 }
+
 input {
   transition: 0.5s;
-  color: black;
+  color: var(--dark-color);
+  border: none;
+  outline: none;
+  padding: 5px;
+  border-radius: 5px;
+  transition: all .1s ease-in-out;
 }
+
+input:focus {
+  outline: 2px solid var(--main-color);
+}
+
 .sub-btn {
   transition: 0.5s;
   cursor: pointer;
-  position: relative;
-  background: transparent;
-  border: 2px solid #0ef;
+  background: var(--main-color);
   outline: none;
+  margin: 10px 0;
 }
+
 .new-btn {
   border: transparent;
-  background-color: #0ef;
+  background-color: var(--main-color);
   color: #081b29;
   border-radius: 10px;
   padding: 5px 25px;
   margin: 5px;
 }
+
 .new-btn:hover {
   background-color: #fff;
   transition: 0.5s;
 }
+
 /*In edit student detail we will make this hidden class in a div*/
 .hidden {
   display: none;
 }
+
 table,
 th,
 td {
   text-align: center;
   border: 3px solid rgb(17, 190, 196);
 }
+
+
 .box {
   box-shadow: rgba(126, 203, 236, 0.12) 0px 15px 15px 0px,
     rgba(131, 209, 243, 0.32) 0px 0px 8px 8px;
   position: relative;
   width: 700px;
-  height: 400px;
+  height: fit-content;
   background: transparent;
   border: 3px solid rgb(17, 190, 196);
 }
+
 /* button animation */
 .btn:link,
 .btn:visited {
@@ -84,7 +114,7 @@ td {
 }
 
 .btn-white {
-  background-color: #0ef;
+  background-color: var(--main-color);
   color: #081b29;
   font-size: 17px;
 }

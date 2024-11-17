@@ -13,20 +13,23 @@
 <body>
     <div class="container">
         <div class="row d-flex justify-content-center">
-            <div class="col-12 box text-center align-items-md-center m-5">
+            <div class="col-12 box text-center align-items-md-center m-5 form-wrapper">
                 <!-- Making a form for the Addmission  -->
                 <h1 class="fs-50 fw-bold mt-3">Addmission Form</h1>
                 <form action="" id="studentForm">
-                    <label for="name">Name:</label>
-                    <input class="mt-2 w-100" type="text" id="name" name="name" required> <br><br>
+                    <label for="name">Name :</label>
+                    <input class="mt-2 w-100" type="text" id="name" name="name" required
+                        placeholder="Your Name (ahmed, aisha,..etc)"> <br><br>
 
-                    <label for="age">Age:</label>
-                    <input class="mt-2 w-100" type="number" id="age" name="name" required> <br><br>
+                    <label for="age">Age :</label>
+                    <input class="mt-2 w-100" type="number" id="age" name="name" required
+                        placeholder="Your Age (20, 19, 25,...etc)"> <br><br>
 
-                    <label for="class">Class:</label>
-                    <input class="mt-2 w-100" type="number" id="class" id="class" required> <br><br>
+                    <label for="class">Class :</label>
+                    <input class="mt-2 w-100" type="number" id="class" id="class" required
+                        placeholder="Your class (1, 2, 3,...etc)"> <br><br>
 
-                    <button class="btn btn-white btn-animate mt-2 p-2 sub-btn w-100" type="submit">Submit</button>
+                    <button class="btn btn-animate mt-2 p-2 sub-btn w-100" type="submit">Submit</button>
                 </form>
             </div>
         </div>
@@ -49,8 +52,8 @@
         </div>
         <!-- In class=>hidden div making a Edit Student Form   -->
         <div id="editForm" class="hidden">
-        <div class="row d-flex justify-content-center">
-            <div class="col-12 box text-center align-items-md-center m-5">
+            <div class="row d-flex justify-content-center">
+                <div class="col-12 box text-center align-items-md-center m-5">
                     <!-- Making a form for the Addmission  -->
                     <h1 class="fs-50 fw-bold mt-3">Edit Student Details</h1>
                     <input class="mt-2 w-100" type="hidden" name="edited" id="editIndex">
